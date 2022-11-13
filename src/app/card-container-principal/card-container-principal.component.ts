@@ -10,8 +10,9 @@ export class CardContainerPrincipalComponent implements OnInit {
 
   constructor(private weather: WeatherService) { }
 
-  NombreCiudad: string = 'london'
+  NombreCiudad: string = 'london';
   weath: any;
+  
 
 
   ngOnInit(): void {

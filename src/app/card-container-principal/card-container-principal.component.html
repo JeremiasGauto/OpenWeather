@@ -1,5 +1,38 @@
+<div class="row">
+
+
+
 <p>card-container-principal works!</p>
 <button type="button" class="btn btn-primary" (click)="cargaWeather()">Datos del tiempo</button>
 
-<input type="search" placeholder="{{weath.name}}">
-<h1></h1>
+
+<input type="search" placeholder="busca una ciudad ">
+
+<p *ngIf="weath">datos de ciudad actual: <strong>{{weath.name}}</strong></p> 
+
+<div class="card mt-5" style="width: 18rem;">
+  <img src="https://www.lanacion.com.ar/resizer/xBGo9fmqycRKuOSFrZbmP6lh8Vg=/309x206/smart/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/3QGR4CXB5RDZTBQ5K4GEKBKMRA.jpg" class="card-img-top mt-3" alt="..." >
+
+
+
+  <div class="card-body">
+    <h5 class="card-title" *ngIf="weath">{{weath.name}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngIf="weath">Humedad:{{weath.main.humidity}}</li>
+    <li class="list-group-item" *ngIf="weath">temp: {{weath.main.temp}}</li>
+    <li class="list-group-item" *ngIf="weath">latitud: {{weath.coord.lat}}</li>
+    <li class="list-group-item" *ngIf="weath">longitud: {{weath.coord.lon}}</li>
+    <li class="list-group-item"*ngIf="weath">longitud: {{weath.coord.lon}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+
+
+
+</div>
