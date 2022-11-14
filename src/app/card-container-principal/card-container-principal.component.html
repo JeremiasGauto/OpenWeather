@@ -2,13 +2,13 @@
 
 
 
-<p>card-container-principal works!</p>
+
 <button type="button" class="btn btn-primary" (click)="cargaWeather()">Datos del tiempo</button>
 
 
 <input type="search" placeholder="busca una ciudad ">
 
-<p *ngIf="weath">datos de ciudad actual: <strong>{{weath.name}}</strong></p> 
+<h2 *ngIf="weath">Datos de ciudad actual: <strong>{{weath.name}}</strong></h2> 
 
 <div class="card mt-5" style="width: 18rem;">
   <img src="https://www.lanacion.com.ar/resizer/xBGo9fmqycRKuOSFrZbmP6lh8Vg=/309x206/smart/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/3QGR4CXB5RDZTBQ5K4GEKBKMRA.jpg" class="card-img-top mt-3" alt="..." >

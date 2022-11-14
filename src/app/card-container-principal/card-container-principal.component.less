@@ -1,14 +1,33 @@
 
 .row{
+    height: 900px;
     display:flex;
     justify-content:center;
     align-items:center;
+    background: rgb(89, 193, 189);
+        background: linear-gradient(218deg, rgba(89, 193, 189, 1) 0%, rgba(13, 76, 146, 1) 57%);
 
 }
 
+h2{display: flex;
+    justify-content:center;
+}
+
+input, button{
+    width: 250px;
+}
 .card{
-    background: rgb(15, 7, 15);
-        background: linear-gradient(159deg, rgba(15, 7, 15, 1) 0%, rgba(107, 68, 147, 1) 52%, rgb(121, 58, 223) 100%);
+    background: rgba(207, 245, 231, 0.56);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(13.4px);
+        -webkit-backdrop-filter: blur(13.4px);
+        border: 1px solid rgba(207, 245, 231, 1);
+
+}
+
+.card:hover{
+    filter:blur(0px);
 }
 
 .card ul li{
