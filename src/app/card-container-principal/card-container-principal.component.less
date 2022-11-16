@@ -9,6 +9,22 @@
 
 }
 
+p{
+    display: inline;
+}
+
+.card-body>span{
+    font-weight: bold;
+    
+}
+
+img{
+    width: 100px;
+    animation: 6s linear infinite;
+    animation-name: slide;
+    
+}
+
 h2{display: flex;
     justify-content:center;
 }
@@ -17,21 +33,47 @@ input, button{
     width: 250px;
 }
 .card{
-    background: rgba(207, 245, 231, 0.56);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(13.4px);
-        -webkit-backdrop-filter: blur(13.4px);
-        border: 1px solid rgba(207, 245, 231, 1);
+    display: flex;
+   align-items: center;
+background: rgba(196, 178, 178, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.5s;
 
 }
 
 .card:hover{
-    filter:blur(0px);
+    transform:scale(1.05);
 }
 
 .card ul li{
     border-radius: 5px;
     margin-top: 5px;
 
+}
+
+@keyframes slide{
+
+    0% {
+        transform: translateX(0px);
+    }
+
+    25%{
+        transform: translateX(50px);
+    }
+
+    50% {
+            transform: translateX(0px);
+        }
+
+    75% {
+             transform: translateX(-50px);
+         }
+    
+        100% {
+            transform: translateX(0px);
+        }
 }

@@ -10,7 +10,7 @@ export class CardContainerPrincipalComponent implements OnInit {
 
   constructor(private weather: WeatherService) { }
 
-  NombreCiudad: string = 'london';
+  nombreCiudad: string = 'Paris';
   weath: any;
   
 
@@ -21,14 +21,16 @@ export class CardContainerPrincipalComponent implements OnInit {
   }
 
   cargaWeather() {
-    this.weather.getWeather(this.NombreCiudad).subscribe(
+    this.weather.getWeather(this.nombreCiudad).subscribe(
       res => {
         console.log(res);
-        this.weath=res
-      },      
+        this.weath = res
+      },
       err => console.log(err)
     )
-    return 
+    return
   }
+
+  
 
 }
