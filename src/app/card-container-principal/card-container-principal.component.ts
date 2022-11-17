@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { WeatherService } from '../services/weather.service';
 
 @Component({
@@ -10,18 +11,19 @@ export class CardContainerPrincipalComponent implements OnInit {
 
   constructor(private weather: WeatherService) { }
 
+  
   nombreCiudad: string = 'Paris';
   weath: any;
   
 
 
   ngOnInit(): void {
-    this.cargaWeather()
     
+    this.cargaWeather('lujan');
   }
 
-  cargaWeather() {
-    this.weather.getWeather(this.nombreCiudad).subscribe(
+  cargaWeather(nombre:any) {
+    this.weather.getWeather(nombre).subscribe(
       res => {
         console.log(res);
         this.weath = res
@@ -31,6 +33,15 @@ export class CardContainerPrincipalComponent implements OnInit {
     return
   }
 
+          
   
+
+  submitLocation(nombre: any) {
+    this.weather.getWeather(nombre);
+    console.log(nombre.value);
+    this.cargaWeather(nombre.value);
+    nombre.value = "";
+      
+  }
 
 }
