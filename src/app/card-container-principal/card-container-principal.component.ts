@@ -28,9 +28,9 @@ export class CardContainerPrincipalComponent implements OnInit {
         console.log(res);
         this.weath = res
       },
-      err => console.log(err)
+      err => alert('La ciudada que busca no se encuentra')
     )
-    return
+    
   }
 
           
