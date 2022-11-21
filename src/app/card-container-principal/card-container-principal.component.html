@@ -9,14 +9,17 @@
 
 <h2 *ngIf="weath">Datos de ciudad actual: {{ weath.name}}</h2> 
 
+
 <div class="card mt-5 mb-5" style="width: 18rem;">
 
   <h2 class="card-title mt-2" *ngIf="weath"><span>{{weath.name}}</span></h2>
+  <p *ngIf="weath">Country {{weath.sys.country}} </p>
   <img *ngIf="weath" src="http://openweathermap.org/img/wn/{{weath.weather[0].icon}}.png" class="card-img-top mt-3" alt="..." >
   <p *ngIf="weath" class="card-text"><span>{{weath.weather[0].description}}</span></p>
 
   <h1 *ngIf="weath"><i class="fa-solid fa-temperature-half"></i> {{ weath.main.temp | number: '1.0-0'}}°C</h1>
   
+  <p *ngIf="weath">Country {{weath.sys.country}} </p>
   <p *ngIf="weath">Sensacion termica {{weath.main.feels_like| number: '1.0-0'}} °C</p>
   <p *ngIf="weath" >Min :{{weath.main.temp_min| number: '1.0-0'}} °c</p>
   <p *ngIf="weath">Max :{{weath.main.temp_max| number: '1.0-0'}} °c</p>
@@ -29,7 +32,7 @@
   </div>
   <ul class="list-group list-group-flush mb-3">
     
-    
+    <li class="list-group-item" *ngIf="weath">Country: {{weath.sys.country}}</li>
     <li class="list-group-item" *ngIf="weath">Humedad: {{weath.main.humidity}}%</li>
     <li class="list-group-item"*ngIf="weath">Viento: {{weath.wind.deg}} meter/sec</li>
     <li class="list-group-item" *ngIf="weath">Latitud: {{weath.coord.lat}}</li>
