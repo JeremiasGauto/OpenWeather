@@ -93,3 +93,18 @@ background: rgba(196, 178, 178, 0.55);
             transform: translateX(0px);
         }
 }
+
+li::before{
+    content: "";
+    border-bottom: 5px solid rgb(85, 61, 124);
+    width: 0px;
+    left: 5px;
+    bottom: 0;
+    position: absolute;
+    transition: 1s;
+}
+
+li:hover::before{
+    width: 95%;
+    
+}
